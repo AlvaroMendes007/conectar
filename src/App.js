@@ -20,14 +20,40 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '100%',
     maxHeight: '100%',
   },
+  container: {
+    '&:hover':{
+      cursor: 'pointer',
+      borderTop: '3px solid green',
+      borderBottom: '3px solid green',
+    }
+  }
 }));
 
+const path = "./assets/img/";
+
 const datas  = [{
-  image: "/static/images/grid/complex.jpg",
-  alt: "complex",
+  id: 1,
+  image:  `${path}l.jpg`,
+  alt: "img",
   name: "Product Name",
   description: "Description",
   price: "19,00"
+},
+{
+  id: 2,
+  image:  `${path}l.jpg`,
+  alt: "img2",
+  name: "Product Name2",
+  description: "Description2",
+  price: "25,00"
+},
+{
+  id: 3,
+  image:  `${path}l.jpg`,
+  alt: "img3",
+  name: "Product Name3",
+  description: "Description3",
+  price: "30,00"
 }];
 
 function App() {
@@ -39,7 +65,7 @@ function App() {
 
         {datas.map((data) => {
           return (
-            <Grid container spacing={2}>
+            <Grid container spacing={2} key={data.id} className={classes.container}>
             <Grid item>
               <ButtonBase className={classes.image}>
                 <img className={classes.img} alt={data.alt} src={data.image} />
@@ -71,7 +97,8 @@ function App() {
 
       </Paper>
     </div>
-  );
+ 
+ );
 }
 
 export default App;
