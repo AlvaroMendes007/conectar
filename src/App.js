@@ -1,35 +1,22 @@
 import React from 'react';
-import { Grid, makeStyles, Paper, Typography, ButtonBase } from '@material-ui/core';
+import { ListSubheader, makeStyles, GridListTileBar, IconButton, GridList, GridListTile } from '@material-ui/core';
+import InfoIcon from '@material-ui/icons/Info';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
-    padding: '80px'
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+    overflow: 'hidden',
+    backgroundColor: theme.palette.background.paper,
   },
-  paper: {
-    padding: theme.spacing(2),
-    margin: 'auto',
-    maxWidth: 500,
+  gridList: {
+    width: 600,
+    height: 450,
   },
-  image: {
-    width: 128,
-    height: 128,
+  icon: {
+    color: 'rgba(255, 255, 255, 0.54)',
   },
-  img: {
-    margin: 'auto',
-    display: 'block',
-    maxWidth: '100%',
-    maxHeight: '100%',
-  },
-  container: {
-    borderTop: '1px solid black',
-    borderBottom: '1px solid black',
-    '&:hover': {
-      cursor: 'pointer',
-      borderTop: '3px solid green',
-      borderBottom: '3px solid green',
-    }
-  }
 }));
 
 const path = "./assets/img/";
@@ -37,7 +24,6 @@ const path = "./assets/img/";
 const datas = [{
   id: 1,
   image: `${path}l.jpg`,
-  alt: "img",
   name: "Product Name",
   description: "Description",
   price: "19,00"
@@ -45,7 +31,6 @@ const datas = [{
 {
   id: 2,
   image: `${path}l.jpg`,
-  alt: "img2",
   name: "Product Name2",
   description: "Description2",
   price: "25,00"
@@ -53,7 +38,6 @@ const datas = [{
 {
   id: 3,
   image: `${path}l.jpg`,
-  alt: "img3",
   name: "Product Name3",
   description: "Description3",
   price: "30,00"
@@ -64,41 +48,25 @@ function App() {
 
   return (
     <div className={classes.root}>
-      <Paper className={classes.paper}>
-
-        {datas.map((data) => {
-          return (
-            <Grid container spacing={2} key={data.id} className={classes.container}>
-              <Grid item>
-                <ButtonBase className={classes.image}>
-                  <img className={classes.img} alt={data.alt} src={data.image} />
-                </ButtonBase>
-              </Grid>
-              <Grid item xs={12} sm container>
-                <Grid item xs container direction="column" spacing={2}>
-                  <Grid item xs>
-                    <Typography gutterBottom variant="subtitle1">
-                      {data.name}
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary">
-                      {data.description}
-                    </Typography>
-                  </Grid>
-                  <Grid item>
-                    <Typography align="right" variant="body2" style={{ cursor: 'pointer' }}>
-                      Remove
-                  </Typography>
-                  </Grid>
-                </Grid>
-                <Grid item>
-                  <Typography variant="subtitle1">R${data.price}</Typography>
-                </Grid>
-              </Grid>
-            </Grid>
-          )
-        })}
-
-      </Paper>
+      <GridList cellHeight={180} className={classes.gridList}>
+        <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
+          <ListSubheader component="div">PRODUTOS</ListSubheader>
+        </GridListTile>
+        {datas.map((data) => (
+          <GridListTile key={data.image}>
+            <img src={data.image} alt={data.image} />
+            <GridListTileBar
+              title={data.name}
+              subtitle={<span>by: {data.price}</span>}
+              actionIcon={
+                <IconButton aria-label={`info about ${data.name}`} className={classes.icon}>
+                  <InfoIcon />
+                </IconButton>
+              }
+            />
+          </GridListTile>
+        ))}
+      </GridList>
     </div>
 
   );

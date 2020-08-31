@@ -26,10 +26,7 @@ function Nav() {
          
             <Box display="flex" flexDirection="row">
                 <Box p={1}>
-                    Produtos
-                </Box>
-                <Box p={1}>
-                    Categorias
+                    Perfil
                 </Box>
                 <Box p={1}>
                     Sair
