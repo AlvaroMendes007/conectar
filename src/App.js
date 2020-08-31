@@ -14,15 +14,13 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
   },
   gridList: {
-    width: 600,
-    height: 450,
+    width: '100%',
+    height: 600,
   },
   icon: {
     color: 'rgba(255, 255, 255, 0.54)',
   },
 }));
-
-const path = "./assets/img/";
 
 const datas = [{
   id: 1,
@@ -44,6 +42,20 @@ const datas = [{
   name: "Product Name3",
   description: "Description3",
   price: "30,00"
+},
+{
+  id: 4,
+  image: `${Penguin}`,
+  name: "Product Name3",
+  description: "Description3",
+  price: "30,00"
+},
+{
+  id: 5,
+  image: `${Penguin}`,
+  name: "Product Name3",
+  description: "Description3",
+  price: "30,00"
 }];
 
 function App() {
@@ -56,7 +68,7 @@ function App() {
           <ListSubheader component="div">PRODUTOS</ListSubheader>
         </GridListTile>
         {datas.map((data) => (
-          <GridListTile key={data.image}>
+          <GridListTile key={data.id}>
             <img src={data.image} alt={data.image} />
             <GridListTileBar
               title={data.name}
