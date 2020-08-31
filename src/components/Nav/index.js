@@ -1,22 +1,41 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles, Box } from '@material-ui/core';
+import LocalShippingOutlinedIcon from '@material-ui/icons/LocalShippingOutlined';
 
 const useStyles = makeStyles(() => ({
     nav: {
-        width: '100%',
-        height: '50px',
-        background: 'white',
+        height: '40px',
         backgroundColor: 'black',
+        color: 'white',
+        display: 'flex',
+        justifyContent: 'space-between',
+    },
+    icon: {
+        width: 45,
+        height: 45
     }
+
 }));
 
 function Nav() {
     const classes = useStyles();
 
     return (
-        <div className={classes.nav}>
-            
-        </div>
+        <nav className={classes.nav}>
+           <LocalShippingOutlinedIcon className={classes.icon}/>     
+         
+            <Box display="flex" flexDirection="row">
+                <Box p={1}>
+                    Produtos
+                </Box>
+                <Box p={1}>
+                    Categorias
+                </Box>
+                <Box p={1}>
+                    Sair
+                </Box>
+            </Box>       
+        </nav>
         )
 }
 

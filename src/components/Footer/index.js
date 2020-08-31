@@ -4,10 +4,12 @@ import { makeStyles } from '@material-ui/core';
 const useStyles = makeStyles(() => ({
     nav: {
         width: '100%',
-        height: '50px',
+        height: '30px',
         background: 'white',
         backgroundColor: 'black',
-        bottom: 0
+        bottom: 0,
+        position: "fixed",
+        color: 'white'
     }
 }));
 
@@ -16,7 +18,7 @@ function Nav() {
 
     return (
         <div className={classes.nav}>
-            
+            &#169; Copyright Álvaro
         </div>
         )
 }

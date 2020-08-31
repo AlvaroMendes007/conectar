@@ -4,6 +4,7 @@ import { Grid, makeStyles, Paper, Typography, ButtonBase } from '@material-ui/co
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    padding: '80px'
   },
   paper: {
     padding: theme.spacing(2),
@@ -21,7 +22,9 @@ const useStyles = makeStyles((theme) => ({
     maxHeight: '100%',
   },
   container: {
-    '&:hover':{
+    borderTop: '1px solid black',
+    borderBottom: '1px solid black',
+    '&:hover': {
       cursor: 'pointer',
       borderTop: '3px solid green',
       borderBottom: '3px solid green',
@@ -31,9 +34,9 @@ const useStyles = makeStyles((theme) => ({
 
 const path = "./assets/img/";
 
-const datas  = [{
+const datas = [{
   id: 1,
-  image:  `${path}l.jpg`,
+  image: `${path}l.jpg`,
   alt: "img",
   name: "Product Name",
   description: "Description",
@@ -41,7 +44,7 @@ const datas  = [{
 },
 {
   id: 2,
-  image:  `${path}l.jpg`,
+  image: `${path}l.jpg`,
   alt: "img2",
   name: "Product Name2",
   description: "Description2",
@@ -49,7 +52,7 @@ const datas  = [{
 },
 {
   id: 3,
-  image:  `${path}l.jpg`,
+  image: `${path}l.jpg`,
   alt: "img3",
   name: "Product Name3",
   description: "Description3",
@@ -66,39 +69,39 @@ function App() {
         {datas.map((data) => {
           return (
             <Grid container spacing={2} key={data.id} className={classes.container}>
-            <Grid item>
-              <ButtonBase className={classes.image}>
-                <img className={classes.img} alt={data.alt} src={data.image} />
-              </ButtonBase>
-            </Grid>
-            <Grid item xs={12} sm container>
-              <Grid item xs container direction="column" spacing={2}>
-                <Grid item xs>
-                  <Typography gutterBottom variant="subtitle1">
-                    {data.name}
+              <Grid item>
+                <ButtonBase className={classes.image}>
+                  <img className={classes.img} alt={data.alt} src={data.image} />
+                </ButtonBase>
+              </Grid>
+              <Grid item xs={12} sm container>
+                <Grid item xs container direction="column" spacing={2}>
+                  <Grid item xs>
+                    <Typography gutterBottom variant="subtitle1">
+                      {data.name}
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary">
+                      {data.description}
+                    </Typography>
+                  </Grid>
+                  <Grid item>
+                    <Typography align="right" variant="body2" style={{ cursor: 'pointer' }}>
+                      Remove
                   </Typography>
-                  <Typography variant="body2" color="textSecondary">
-                    {data.description}
-                  </Typography>
+                  </Grid>
                 </Grid>
                 <Grid item>
-                  <Typography align="right" variant="body2" style={{ cursor: 'pointer' }}>
-                    Remove
-                  </Typography>
+                  <Typography variant="subtitle1">R${data.price}</Typography>
                 </Grid>
               </Grid>
-              <Grid item>
-                <Typography variant="subtitle1">R${data.price}</Typography>
-              </Grid>
             </Grid>
-          </Grid>
           )
         })}
 
       </Paper>
     </div>
- 
- );
+
+  );
 }
 
 export default App;
