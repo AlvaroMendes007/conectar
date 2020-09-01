@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "image": "",
+    "name": "Verdura",
+    "description": "Description",
+    "price": "19,00"
+  },
+  {
+    "id": 2,
+    "image": "",
+    "name": "Legume",
+    "description": "Description2",
+    "price": "25,00"
+  },
+  {
+    "id": 3,
+    "image": "",
+    "name": "Fruta",
+    "description": "Description3",
+    "price": "30,00"
+  }
+]

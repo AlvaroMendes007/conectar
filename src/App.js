@@ -1,9 +1,6 @@
 import React from 'react';
 import { ListSubheader, makeStyles, GridListTileBar, IconButton, GridList, GridListTile } from '@material-ui/core';
 import InfoIcon from '@material-ui/icons/Info';
-import Koala from './assets/img/Koala.jpg';
-import Test from './assets/img/l.jpg';
-import Penguin from './assets/img/Penguins.jpg';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,39 +17,44 @@ const useStyles = makeStyles((theme) => ({
   icon: {
     color: 'rgba(255, 255, 255, 0.54)',
   },
+  item: {
+    '&:hover': {
+      cursor: 'pointer'
+    }
+  }
 }));
 
 const datas = [{
   id: 1,
-  image: `${Koala}`,
+  image: '',
   name: "Product Name",
   description: "Description",
   price: "19,00"
 },
 {
   id: 2,
-  image: `${Test}`,
+  image: '',
   name: "Product Name2",
   description: "Description2",
   price: "25,00"
 },
 {
   id: 3,
-  image: `${Penguin}`,
+  image: '',
   name: "Product Name3",
   description: "Description3",
   price: "30,00"
 },
 {
   id: 4,
-  image: `${Penguin}`,
+  image: '',
   name: "Product Name3",
   description: "Description3",
   price: "30,00"
 },
 {
   id: 5,
-  image: `${Penguin}`,
+  image: '',
   name: "Product Name3",
   description: "Description3",
   price: "30,00"
@@ -68,7 +70,7 @@ function App() {
           <ListSubheader component="div">PRODUTOS</ListSubheader>
         </GridListTile>
         {datas.map((data) => (
-          <GridListTile key={data.id}>
+          <GridListTile key={data.id} className={classes.item}>
             <img src={data.image} alt={data.image} />
             <GridListTileBar
               title={data.name}

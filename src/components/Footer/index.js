@@ -8,7 +8,7 @@ const useStyles = makeStyles(() => ({
         background: 'white',
         backgroundColor: 'black',
         bottom: 0,
-        position: "fixed",
+        position: "static",
         color: 'white'
     }
 }));

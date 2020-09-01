@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles, Box } from '@material-ui/core';
 import LocalShippingOutlinedIcon from '@material-ui/icons/LocalShippingOutlined';
+import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 
 const useStyles = makeStyles(() => ({
     nav: {
@@ -23,8 +24,10 @@ function Nav() {
     return (
         <nav className={classes.nav}>
            <LocalShippingOutlinedIcon className={classes.icon}/>     
-         
             <Box display="flex" flexDirection="row">
+                <Box>
+                    <ShoppingCartOutlinedIcon style={{ height: 40, width: 30 }}/>
+                </Box>
                 <Box p={1}>
                     Perfil
                 </Box>
