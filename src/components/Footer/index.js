@@ -2,13 +2,16 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(() => ({
-    nav: {
+    footer: {
+        position: 'relative',
+        left:0,
+        bottom:0,
+        right:0,
+        textAlign: 'center',
         width: '100%',
-        height: '30px',
+        height: '40px',
         background: 'white',
         backgroundColor: 'black',
-        bottom: 0,
-        position: "static",
         color: 'white'
     }
 }));
@@ -17,8 +20,10 @@ function Nav() {
     const classes = useStyles();
 
     return (
-        <div className={classes.nav}>
-            &#169; Copyright Álvaro
+        <div className={classes.footer}>
+            <p>
+                &#169; Copyright Álvaro
+            </p>
         </div>
         )
 }

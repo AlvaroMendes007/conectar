@@ -58,6 +58,48 @@
           "name": "Product name3",
           "description": "description 3",
           "price": "30,00"
+        },
+        {
+          "id": 6,
+          "image": "5",
+          "name": "Product names1561613",
+          "description": "description 3",
+          "price": "30,00"
+        },
+        {
+          "id": 7,
+          "image": "5",
+          "name": "Product 123",
+          "description": "description 3",
+          "price": "30,00"
+        },   
+        {
+          "id": 8,
+          "image": "5",
+          "name": "Product 8",
+          "description": "description 3",
+          "price": "30,00"
+        },  
+        {
+          "id": 9,
+          "image": "5",
+          "name": "Product 9",
+          "description": "description 3",
+          "price": "30,00"
+        },
+        {
+          "id": 10,
+          "image": "5",
+          "name": "Product 10",
+          "description": "description 3",
+          "price": "30,00"
+        },
+        {
+          "id": 11,
+          "image": "5",
+          "name": "Product 11",
+          "description": "description 3",
+          "price": "30,00"
         }
       ]
 }

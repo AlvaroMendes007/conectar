@@ -4,7 +4,12 @@ import { makeStyles, Card, CardActionArea, CardActions, CardContent, CardMedia, 
 const useStyles = makeStyles({
     root: {
         maxWidth: 345,
+        flexBasis: '20%'
     },
+    main: {
+        display: 'flex',
+        flexWrap: 'wrap'
+    }
 });
 
 export default function ImgMediaCard() {
@@ -24,11 +29,10 @@ export default function ImgMediaCard() {
     const classes = useStyles();
 
     return (
-        <>
+        <div className={classes.main}>
             {datas.map((data) => {
-
                 return (
-                    <Card className={classes.root}>
+                    <Card className={classes.root} key={data.id}>
                         <CardActionArea>
                             <CardMedia
                                 component="img"
@@ -45,6 +49,6 @@ export default function ImgMediaCard() {
                         </CardActionArea>
                     </Card>)
             })}
-        </>
+        </div>
     );
 }
