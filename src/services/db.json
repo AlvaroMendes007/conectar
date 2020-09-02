@@ -2,21 +2,21 @@
     "categorias": [
         {
           "id": 1,
-          "image": "",
+          "image": "Verdura.jpg",
           "name": "Verdura",
           "description": "Description",
           "price": "19,00"
         },
         {
           "id": 2,
-          "image": "",
+          "image": "Legume.jpg",
           "name": "Legume",
           "description": "Description2",
           "price": "25,00"
         },
         {
           "id": 3,
-          "image": "",
+          "image": "Fruta.jpg",
           "name": "Fruta",
           "description": "Description3",
           "price": "30,00"
