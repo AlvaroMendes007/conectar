@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { makeStyles, Card, CardActionArea, CardActions, CardContent, CardMedia, Button, Typography } from '@material-ui/core';
+import Nav from '../../components/Nav';
+import Footer from '../../components/Footer';
 
 const useStyles = makeStyles({
     root: {
@@ -29,6 +31,8 @@ export default function ImgMediaCard() {
     const classes = useStyles();
 
     return (
+        <>
+        <Nav />
         <div className={classes.main}>
             {datas.map((data) => {
                 return (
@@ -50,5 +54,7 @@ export default function ImgMediaCard() {
                     </Card>)
             })}
         </div>
+        <Footer />
+        </>
     );
 }

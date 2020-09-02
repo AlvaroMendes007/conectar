@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react';
 // import Verdura from '../../assets/img/verdura.jpg';
 import { ListSubheader, makeStyles, GridListTileBar, IconButton, GridList, GridListTile } from '@material-ui/core';
 import InfoIcon from '@material-ui/icons/Info';
+import Nav from '../../components/Nav';
+import Footer from '../../components/Footer';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -71,6 +73,8 @@ function Categories() {
   const imgPath = './../assets/img/';
 
   return (
+    <>
+    <Nav />
     <div className={classes.root}>
       <GridList cellHeight={300} className={classes.gridList}>
         <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
@@ -92,6 +96,8 @@ function Categories() {
         ))}
       </GridList>
     </div>
+    <Footer />
+    </>
   );
 }
 
