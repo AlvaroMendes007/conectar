@@ -27,79 +27,90 @@
         {
           "id": 1,
           "image": "1",
-          "name": "Product name",
+          "name": "Alface",
           "description": "description",
-          "price": "19,00"
+          "price": "19,00",
+          "idCategoria": 1
         },
         {
           "id": 2,
           "image": "2",
-          "name": "Product name 2",
+          "name": "Tomate",
           "description": "description 2",
-          "price": "25,00"
+          "price": "25,00",
+          "idCategoria": 1
         },
         {
           "id": 3,
           "image": "3",
-          "name": "Product name 3",
+          "name": "Cebola",
           "description": "description 3",
-          "price": "30,00"
+          "price": "30,00",
+          "idCategoria": 1
         },
         {
           "id": 4,
           "image": "4",
-          "name": "Product name 3",
+          "name": "Cenoura",
           "description": "description 3",
-          "price": "30,00"
+          "price": "30,00",
+          "idCategoria": 2
         },
         {
           "id": 5,
           "image": "5",
-          "name": "Product name3",
+          "name": "Batata",
           "description": "description 3",
-          "price": "30,00"
+          "price": "30,00",
+          "idCategoria": 2
         },
         {
           "id": 6,
           "image": "5",
-          "name": "Product names1561613",
+          "name": "Maçã",
           "description": "description 3",
-          "price": "30,00"
+          "price": "30,00",
+          "idCategoria": 3
         },
         {
           "id": 7,
           "image": "5",
-          "name": "Product 123",
+          "name": "Ameixa",
           "description": "description 3",
-          "price": "30,00"
+          "price": "30,00",
+          "idCategoria": 3
         },   
         {
           "id": 8,
           "image": "5",
-          "name": "Product 8",
+          "name": "Laranja",
           "description": "description 3",
-          "price": "30,00"
+          "price": "30,00",
+          "idCategoria": 3
         },  
         {
           "id": 9,
           "image": "5",
-          "name": "Product 9",
+          "name": "Goiaba",
           "description": "description 3",
-          "price": "30,00"
+          "price": "30,00",
+          "idCategoria": 3
         },
         {
           "id": 10,
           "image": "5",
-          "name": "Product 10",
+          "name": "Mandioca",
           "description": "description 3",
-          "price": "30,00"
+          "price": "30,00",
+          "idCategoria": 2
         },
         {
           "id": 11,
           "image": "5",
-          "name": "Product 11",
+          "name": "Melancia",
           "description": "description 3",
-          "price": "30,00"
+          "price": "30,00",
+          "idCategoria": 3
         }
       ]
 }

@@ -15,7 +15,6 @@ const useStyles = makeStyles(() => ({
         width: 45,
         height: 45
     }
-
 }));
 
 function Nav() {
