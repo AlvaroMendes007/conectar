@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 // import Fruta from '../../assets/img/fruta.jpg';
 // import Legume from '../../assets/img/legume.jpg';
 // import Verdura from '../../assets/img/verdura.jpg';
@@ -74,29 +75,30 @@ function Categories() {
 
   return (
     <>
-    <Nav />
-    <div className={classes.root}>
-      <GridList cellHeight={300} className={classes.gridList}>
-        <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-          <ListSubheader component="div">CATEGORIAS</ListSubheader>
-        </GridListTile>
-        {datas.map((data) => (
-          <GridListTile key={data.id} className={classes.item}>
-            <img src={`${imgPath}${data.image}`} alt={data.image} />
-            <GridListTileBar
-              title={data.name}
-              // subtitle={<span>R$: {data.price}</span>}
-              actionIcon={
-                <IconButton aria-label={`info about ${data.name}`} className={classes.icon}>
-                  <InfoIcon />
-                </IconButton>
-              }
-            />
+      <Nav />
+      <div className={classes.root}>
+        <GridList cellHeight={300} className={classes.gridList}>
+          <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
+            <ListSubheader component="div">CATEGORIAS</ListSubheader>
           </GridListTile>
-        ))}
-      </GridList>
-    </div>
-    <Footer />
+          {datas.map((data) => (
+            <GridListTile key={data.id} className={classes.item}>
+              <img src={`${imgPath}${data.image}`} alt={data.image} />
+              <Link to="produto">
+              <GridListTileBar
+                title={data.name}
+                actionIcon={
+                  <IconButton aria-label={`info about ${data.name}`} className={classes.icon}>
+                    <InfoIcon />
+                  </IconButton>
+                }
+              />
+              </Link>
+            </GridListTile>
+          ))}
+        </GridList>
+      </div>
+      <Footer />
     </>
   );
 }

@@ -6,8 +6,12 @@ import Categoria from './pages/categories';
 import Produto from './pages/produtos';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <BrowserRouter>
+    <Switch>
+      <Route path="/categoria" component={Categoria}/>
+      <Route path="/produto" component={Produto}/>
+    </Switch>
+  </BrowserRouter>,
   
-  </React.StrictMode>,
   document.getElementById('root')
 );
