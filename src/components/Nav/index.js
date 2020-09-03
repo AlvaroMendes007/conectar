@@ -22,10 +22,10 @@ function Nav() {
 
     return (
         <nav className={classes.nav}>
-           <LocalShippingOutlinedIcon className={classes.icon}/>     
+            <LocalShippingOutlinedIcon className={classes.icon} />
             <Box display="flex" flexDirection="row">
                 <Box>
-                    <ShoppingCartOutlinedIcon style={{ height: 40, width: 30 }}/>
+                    <ShoppingCartOutlinedIcon style={{ height: 40, width: 30 }} />
                 </Box>
                 <Box p={1}>
                     Perfil
@@ -33,9 +33,9 @@ function Nav() {
                 <Box p={1}>
                     Sair
                 </Box>
-            </Box>       
+            </Box>
         </nav>
-        )
+    )
 }
 
 export default Nav;

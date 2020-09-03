@@ -30,7 +30,7 @@
           "name": "Alface",
           "description": "description",
           "price": "19,00",
-          "idCategoria": 1
+          "categoriaId": 1
         },
         {
           "id": 2,
@@ -38,7 +38,7 @@
           "name": "Tomate",
           "description": "description 2",
           "price": "25,00",
-          "idCategoria": 1
+          "categoriaId": 1
         },
         {
           "id": 3,
@@ -46,7 +46,7 @@
           "name": "Cebola",
           "description": "description 3",
           "price": "30,00",
-          "idCategoria": 1
+          "categoriaId": 1
         },
         {
           "id": 4,
@@ -54,7 +54,7 @@
           "name": "Cenoura",
           "description": "description 3",
           "price": "30,00",
-          "idCategoria": 2
+          "categoriaId": 2
         },
         {
           "id": 5,
@@ -62,7 +62,7 @@
           "name": "Batata",
           "description": "description 3",
           "price": "30,00",
-          "idCategoria": 2
+          "categoriaId": 2
         },
         {
           "id": 6,
@@ -70,7 +70,7 @@
           "name": "Maçã",
           "description": "description 3",
           "price": "30,00",
-          "idCategoria": 3
+          "categoriaId": 3
         },
         {
           "id": 7,
@@ -78,7 +78,7 @@
           "name": "Ameixa",
           "description": "description 3",
           "price": "30,00",
-          "idCategoria": 3
+          "categoriaId": 3
         },   
         {
           "id": 8,
@@ -86,7 +86,7 @@
           "name": "Laranja",
           "description": "description 3",
           "price": "30,00",
-          "idCategoria": 3
+          "categoriaId": 3
         },  
         {
           "id": 9,
@@ -94,7 +94,7 @@
           "name": "Goiaba",
           "description": "description 3",
           "price": "30,00",
-          "idCategoria": 3
+          "categoriaId": 3
         },
         {
           "id": 10,
@@ -102,7 +102,7 @@
           "name": "Mandioca",
           "description": "description 3",
           "price": "30,00",
-          "idCategoria": 2
+          "categoriaId": 2
         },
         {
           "id": 11,
@@ -110,7 +110,7 @@
           "name": "Melancia",
           "description": "description 3",
           "price": "30,00",
-          "idCategoria": 3
+          "categoriaId": 3
         }
       ]
 }

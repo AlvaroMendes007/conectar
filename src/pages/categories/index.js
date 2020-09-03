@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useHistory } from 'react-router-dom';
-// import Fruta from '../../assets/img/fruta.jpg';
-// import Legume from '../../assets/img/legume.jpg';
-// import Verdura from '../../assets/img/verdura.jpg';
+import { Link } from 'react-router-dom';
 import { ListSubheader, makeStyles, GridListTileBar, IconButton, GridList, GridListTile } from '@material-ui/core';
 import InfoIcon from '@material-ui/icons/Info';
 import Nav from '../../components/Nav';
@@ -30,35 +27,9 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-// const datas = [
-//   {
-//     "id": 1,
-//     "image": `${Verdura}`,
-//     "name": "Verdura",
-//     "description": "Description",
-//     "price": "19,00"
-//   },
-//   {
-//     "id": 2,
-//     "image": `${Legume}`,
-//     "name": "Legume",
-//     "description": "Description2",
-//     "price": "25,00"
-//   },
-//   {
-//     "id": 3,
-//     "image": `${Fruta}`,
-//     "name": "Fruta",
-//     "description": "Description3",
-//     "price": "30,00"
-//   }
-// ]
-
 function Categories() {
 
   const [datas, setData] = useState([]);
-  // const [nome, setNome] = useState(null);
-  // const [imagem, setImagem] = useState(null);
 
   const url = "http://localhost:3001/categorias";
 
@@ -84,15 +55,15 @@ function Categories() {
           {datas.map((data) => (
             <GridListTile key={data.id} className={classes.item}>
               <img src={`${imgPath}${data.image}`} alt={data.image} />
-              <Link to="produto">
-              <GridListTileBar
-                title={data.name}
-                actionIcon={
-                  <IconButton aria-label={`info about ${data.name}`} className={classes.icon}>
-                    <InfoIcon />
-                  </IconButton>
-                }
-              />
+              <Link to={`produto`}>
+                <GridListTileBar
+                  title={data.name}
+                  actionIcon={
+                    <IconButton aria-label={`info about ${data.name}`} className={classes.icon}>
+                      <InfoIcon />
+                    </IconButton>
+                  }
+                />
               </Link>
             </GridListTile>
           ))}
