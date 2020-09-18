@@ -55,7 +55,7 @@ function Categories() {
           {datas.map((data) => (
             <GridListTile key={data.id} className={classes.item}>
               <img src={`${imgPath}${data.image}`} alt={data.image} />
-              <Link to={`produto`}>
+              <Link to={`produto/${data.id}`}>
                 <GridListTileBar
                   title={data.name}
                   actionIcon={

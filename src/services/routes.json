@@ -1,4 +1,0 @@
-{
-    "/api/*": "/$1",
-    "/:id/cad": "/categorias/:id"
-}

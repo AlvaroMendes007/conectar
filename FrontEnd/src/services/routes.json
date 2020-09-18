@@ -1,0 +1,5 @@
+{
+    "/api/v1/*": "/$1",
+    "/:resource/:id/produto": "/:resource/:id",
+    "/produto/:categoria": "/produtos?categoriaId=:categoria"
+}
