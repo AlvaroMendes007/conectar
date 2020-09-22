@@ -34,7 +34,23 @@ public class ProductResource {
 		return ResponseEntity.ok().body(produtos);
 	}
 	
-	@RequestMapping(value = "/produtos/{categoriaId}")
+	@RequestMapping(value = "/produtos/{produtoId}")
+	public ResponseEntity <List<Product>> findProductById(@PathVariable("produtoId") int produtoId){
+		
+		List<Product> produtos = new ArrayList<Product>();
+						
+		produtos.add(product);
+		produtos.add(product1);
+		produtos.add(product3);
+		produtos.add(product4);
+		produtos.add(product5);
+		
+		produtos.removeIf(produto -> produto.getId() != produtoId);
+		
+		return ResponseEntity.ok().body(produtos);
+	}
+	
+	@RequestMapping(value = "/produtos/categoria/{categoriaId}")
 	public ResponseEntity <List<Product>> findProductByCategory(@PathVariable("categoriaId") int categorieId){
 		
 		List<Product> produtos = new ArrayList<Product>();
